@@ -81,7 +81,7 @@ class App extends React.Component {
 
  onPictureSubmit = () =>{
   this.setState({imageURL:this.state.input})
-     fetch('https://facerecognition-webpage.herokuapp.com/imageurl',{
+     fetch('https://git.heroku.com/facerecognition-webpage.git/imageurl',{
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -91,7 +91,7 @@ class App extends React.Component {
       .then(response => response.json())
       .then(response =>{
         if(response){
-          fetch('https://facerecognition-webpage.herokuapp.com/image',{
+          fetch('https://git.heroku.com/facerecognition-webpage.git/image',{
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
