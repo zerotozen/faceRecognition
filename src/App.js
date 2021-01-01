@@ -81,7 +81,7 @@ class App extends React.Component {
 
  onPictureSubmit = () =>{
   this.setState({imageURL:this.state.input})
-     fetch('https://recognition-web-api.herokuapp.com//imageurl',{
+     fetch('https://recognition-web-api.herokuapp.com/imageurl',{
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -91,7 +91,7 @@ class App extends React.Component {
       .then(response => response.json())
       .then(response =>{
         if(response){
-          fetch('https://recognition-web-api.herokuapp.com//image',{
+          fetch('https://recognition-web-api.herokuapp.com/image',{
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
